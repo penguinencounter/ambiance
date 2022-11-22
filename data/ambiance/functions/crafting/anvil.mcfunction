@@ -16,4 +16,8 @@ particle dust 0.1 0.1 0.1 1 ~-0.5 ~ ~-0.5 0 0 0 1 3 force
 particle dust 0.1 0.1 0.1 1 ~ ~ ~-0.5 0 0 0 1 3 force
 particle dust 0.1 0.1 0.1 1 ~0.5 ~ ~-0.5 0 0 0 1 3 force
 particle dust 0.1 0.1 0.1 1 ~-0.5 ~ ~0.5 0 0 0 1 3 force
+
+function #ambiance:recipe_execute
+
+scoreboard players set #done amb.temp 0
 kill @s
