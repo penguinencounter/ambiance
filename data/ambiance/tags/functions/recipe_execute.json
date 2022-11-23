@@ -1,6 +1,6 @@
 {
     "values": [
-        "ambiance:crafting/recipes/emitter_check"
+        "ambiance:crafting/recipes/emitter/check"
     ],
     "replace": false
 }

@@ -1,4 +1,4 @@
-execute store result score #rounding amb.temp run data get entity @s FallDistance 10
+execute store result score #rounding amb.temp run data get entity @s data.FallDistance 10
 scoreboard players operation #rounding2 amb.temp = #rounding amb.temp
 scoreboard players operation #rounding2 amb.temp %= #10 amb.temp
 scoreboard players operation #rounding amb.temp /= #10 amb.temp
@@ -17,6 +17,7 @@ particle dust 0.1 0.1 0.1 1 ~ ~ ~-0.5 0 0 0 1 3 force
 particle dust 0.1 0.1 0.1 1 ~0.5 ~ ~-0.5 0 0 0 1 3 force
 particle dust 0.1 0.1 0.1 1 ~-0.5 ~ ~0.5 0 0 0 1 3 force
 
+data modify storage ambiance:temp RecipeItems set from entity @s data.MatchingItems
 function #ambiance:recipe_execute
 
 scoreboard players set #done amb.temp 0
