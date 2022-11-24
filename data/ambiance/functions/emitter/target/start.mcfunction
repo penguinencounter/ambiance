@@ -5,6 +5,8 @@ execute anchored eyes rotated as @e[tag=ambiance_raycast, limit=1] run tp @e[tag
 tag @s add ambiance_raycast_owner
 scoreboard players set $rep amb.temp 0
 execute as @e[tag=ambiance_raycast, limit=1] at @s run function ambiance:emitter/target/run
+
+execute if score $hit amb.temp matches 2 as @e[tag=ambaince_raycast_hit] at @s run particle block minecraft:diamond_block ~ ~ ~ 0 0 0 0 1 force
+tag @e[tag=ambaince_raycast_hit] remove ambaince_raycast_hit
 tag @s remove ambiance_raycast_owner
-execute at @e[tag=ambiance_raycast, limit=1] if score $hit amb.temp matches 1 run setblock ~ ~ ~ emerald_block
 kill @e[tag=ambiance_raycast, limit=1]
